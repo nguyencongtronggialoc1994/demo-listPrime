@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guess Number</title>
+</head>
+<body>
+<script>
+    let min = +prompt("Nhap so min: ")
+    let max = +prompt("Nhap so max: ")
+    let comNumber = Math.floor(Math.random()*(max-min))+min;
+    let num = 0;
+    let count = 0;
+
+    // alert(comNumber);
+    do {
+        num = +prompt("Nhap 1 so");
+        count++;
+        if(num > comNumber){
+            alert("So ban nhap lon hon so cua com");
+        }else if(num < comNumber){
+            alert("So ban nhap nho hon so cua com");
+        }else {
+            alert("Ban da nhap dung sau "+ count +" lan doan");
+            break;
+        }
+
+        if (count >= 3){
+            alert("Ban da het luot doan, so chinh xac la "+comNumber);
+            break;
+        }
+    }while (num !== comNumber)
+
+</script>
+</body>
+</html>

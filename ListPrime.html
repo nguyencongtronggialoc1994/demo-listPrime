@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List Prime</title>
+</head>
+<body>
+<script>
+    // function checkPrime() {
+    //     let N = +prompt("Nhap so N");
+    //     let i = 2;
+    //
+    //     while (i<N){
+    //         if(N%i == 0){
+    //             alert(N+" khong phai la so nguyen to");
+    //             return;
+    //         }else{
+    //             i++;
+    //         }
+    //
+    //     }
+    //     alert(N+" la so nguyen to");
+    // }
+
+    // function listPrime(){
+    //     let num = +prompt("Nhap so luong so nguyen to: ");
+    //     let count = 0;
+    //     let numberStart = 0;
+    //     let str = "";
+    //     while (count < num){
+    //         let i=2;
+    //         let flag = true;
+    //         while (i < numberStart){
+    //             if(numberStart%i==0){
+    //                 flag = false;
+    //             }
+    //             i++;
+    //         }
+    //
+    //         if(flag && numberStart >= 2 || numberStart === 2){
+    //             str+= numberStart +",";
+    //             count++;
+    //         }
+    //
+    //         numberStart++;
+    //     }
+    //
+    //     document.write(str);
+    // }
+
+    function isPrime(num){
+        if(num < 2) return false;
+        if(num === 2) return true;
+        for (let i = 2; i < num; i++) {
+            if(num%i === 0){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    function listPrime2(){
+        let number = +prompt("Nhap so luong so nguyen to: ");
+        let count = 0;
+        let n = 0;
+        let str = "";
+        while (count < number){
+            if(isPrime(n)){
+                str += ","+n;
+                count++;
+            }
+            n++;
+        }
+
+        document.write(str);
+    }
+
+    listPrime2();
+
+</script>
+</body>
+</html>
